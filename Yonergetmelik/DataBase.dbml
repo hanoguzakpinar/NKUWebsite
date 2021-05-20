@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Yonergetmelik" Class="DataBaseDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=OGUZ\SQLEXPRESS;Initial Catalog=Yonergetmelik;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="YonergetmelikConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Kullanici" Member="Kullanici">
+    <Type Name="Kullanici">
+      <Column Name="kullanici_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="adsoyad" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="sifre" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="gsorusu" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="gcevap" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Kullanici_Belge" Member="Belge" ThisKey="kullanici_id" OtherKey="kullanici_id" Type="Belge" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Kategori" Member="Kategori">
+    <Type Name="Kategori">
+      <Column Name="kategori_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ad" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="aciklama" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Kategori_Belge" Member="Belge" ThisKey="kategori_id" OtherKey="kategori_id" Type="Belge" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Belge" Member="Belge">
+    <Type Name="Belge">
+      <Column Name="belge_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="baslik" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="kullanici_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="kategori_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tarih" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="icerik" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="Kategori_Belge" Member="Kategori" ThisKey="kategori_id" OtherKey="kategori_id" Type="Kategori" IsForeignKey="true" />
+      <Association Name="Kullanici_Belge" Member="Kullanici" ThisKey="kullanici_id" OtherKey="kullanici_id" Type="Kullanici" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

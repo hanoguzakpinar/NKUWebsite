@@ -1,0 +1,446 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master.master.cs" Inherits="Yonergetmelik.Master" %>
+
+<%@ Register Assembly="CKEditor.NET" Namespace="CKEditor.NET" TagPrefix="CKEditor" %>
+
+<!DOCTYPE html>
+<html class="side-header">
+
+<head runat="server">
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>NKÜ Öğrenci İşleri Daire Başkanlığı</title>
+
+    <meta name="keywords" content="NKU,HanOguz" />
+    <meta name="description" content="NKUProject">
+    <meta name="author" content="hanoguz">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/fav-icon.png" type="fav" />
+    <link rel="apple-touch-icon" href="images/fav-icon.png">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+
+    <!-- Web Fonts  -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light&display=swap" rel="stylesheet" type="text/css">
+
+    <!-- Vendor CSS -->
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="vendor/animate/animate.compat.css">
+    <link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.min.css">
+    <link rel="stylesheet" href="vendor/owl.carousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="vendor/owl.carousel/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="vendor/magnific-popup/magnific-popup.min.css">
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/theme-elements.css">
+    <link rel="stylesheet" href="css/theme-blog.css">
+    <link rel="stylesheet" href="css/theme-shop.css">
+
+    <!-- Current Page CSS -->
+    <link rel="stylesheet" href="vendor/rs-plugin/css/settings.css">
+    <link rel="stylesheet" href="vendor/rs-plugin/css/layers.css">
+    <link rel="stylesheet" href="vendor/rs-plugin/css/navigation.css">
+    <link rel="stylesheet" href="vendor/circle-flip-slideshow/css/component.css">
+
+    <!-- Demo CSS -->
+
+
+    <!-- Skin CSS -->
+    <link rel="stylesheet" href="css/skins/default.css">
+
+    <!-- Theme Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- Head Libs -->
+    <script src="vendor/modernizr/modernizr.min.js"></script>
+    
+
+</head>
+
+<body>
+    <div class="body">
+        <header id="header" class="side-header d-flex">
+            <div class="header-body">
+                <div class="header-container container d-flex h-100">
+                    <div class="header-column flex-row flex-lg-column justify-content-center h-100">
+                        <div class="header-row flex-row justify-content-start justify-content-lg-center py-lg-5">
+                            <div class="header-logo">
+                                <a href="Default.aspx">
+                                    <img alt="nku" width="119" height="122" src="images/l0g0.png">
+                                    
+                                </a>
+                            </div>
+                        </div>
+                        <div class="header-row header-row-side-header flex-row h-100 pb-lg-5">
+                            <div class="header-nav header-nav-links header-nav-links-side-header header-nav-links-vertical header-nav-links-vertical-dropdown align-self-start">
+                                <div class="header-nav-main header-nav-main-square header-nav-main-dropdown-no-borders header-nav-main-effect-4 header-nav-main-sub-effect-1">
+                                    <nav class="collapse">
+                                        <ul class="nav nav-pills" id="mainNav">
+                                            <li class="dropdown">
+                                                <a class="dropdown-item dropdown-toggle active" href="Default.aspx">
+                                                    Ana Sayfa
+                                                </a>
+                                            </li>
+                                            <li class="dropdown">
+                                                <a class="dropdown-item dropdown-toggle" href="Login.aspx">
+                                                    Kullanıcı Girişi / Profil
+                                                </a>
+                                            </li>
+
+                                            <li class="dropdown">
+                                                <a class="dropdown-item dropdown-toggle" href="#">
+                                                    Yönetmelik ve Yönergeler
+                                                    
+                                                </a>
+                                                 <ul class="dropdown-menu">
+                                                    <li>
+                                                        <a class="dropdown-item" href="Yonetmelikler.aspx">
+                                                            Yönetmelikler
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item" href="Yonergeler.aspx">
+                                                            Yönergeler
+                                                        </a>
+                                                    </li>
+                            
+
+                                                </ul>
+                                            </li>
+
+                                           
+
+                                            <li class="dropdown">
+                                                <a class="dropdown-item dropdown-toggle" href="#">
+                                                    Kurumsal
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                    <li>
+                                                        <a class="dropdown-item" href="#">
+                                                            Misyon - Vizyon
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item" href="#">
+                                                            Personel
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item" href="#">
+                                                            Akademik Birim Öğrenci İşleri İletişim
+                                                        </a>
+                                                    </li>
+
+                                                </ul>
+                                            </li>
+
+                                            <li class="dropdown">
+                                                <a class="dropdown-item dropdown-toggle" href="#">
+                                                    Öğrenci
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                    <li>
+                                                        <a class="dropdown-item" href="#">
+                                                            Öğrenci Bilgi Sistemi
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item" href="#">
+                                                            KYK Burs Başvuru
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item" href="#">
+                                                            Aday Öğrencilerimiz
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item" href="#">
+                                                            Yemek Kartına Kredi Kartından Para Yükleme
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item" href="#">
+                                                            Mezun (Diploma) Sorgulama
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item" href="#">
+                                                            Uluslararası Öğrenci Koordinatörlüğü - International Student Office
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item" href="#">
+                                                            Öğrenim Ücretleri
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li class="dropdown">
+                                                <a class="dropdown-item dropdown-toggle" href="#">
+                                                    Faydalı Linkler
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                    <li>
+                                                        <a class="dropdown-item" href="#">
+                                                            Yükseköğretim Program Atlası
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item" href="#">
+                                                            Türkiye Bursları
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item" href="#">
+                                                            Bilgi Paketi
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item" href="#">
+                                                            TYYÇ
+                                                        </a>
+                                                    </li>
+
+                                                </ul>
+                                            </li>
+
+                                            
+
+                                            <li class="dropdown">
+                                                <a class="dropdown-item dropdown-toggle" href="#">
+                                                    Kalite - İç Kontrol
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                    <li>
+                                                        <a class="dropdown-item" href="#">
+                                                            Kalite Politikamız
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item" href="#">
+                                                            Birim Kalite Elçileri
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item" href="#">
+                                                            Faaliyet Raporları
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item" href="#">
+                                                            Anketler
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item" href="#">
+                                                            İş Akışları
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item" href="#">
+                                                            Dokümanlar
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li class="dropdown">
+                                                <a class="dropdown-item dropdown-toggle" href="#">
+                                                    Yaz Okulu / Yatay Geçiş
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                    <li>
+                                                        <a class="dropdown-item" href="#">
+                                                            2019 -2020 Yaz Okulu
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item" href="#">
+                                                            2018 - 2019 Yaz Okulu
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item" href="#">
+                                                            2020 - 2021 Yatay Geçiş
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item" href="#">
+                                                            2019 - 2020 Yatay Geçiş
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item" href="#">
+                                                            2018 - 2019 Yatay Geçiş
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li class="dropdown">
+                                                <a class="dropdown-item dropdown-toggle" href="#">
+                                                    Lisanüstü Başvuru İlanları
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                    <li>
+                                                        <a class="dropdown-item" href="#">
+                                                            Fen Bilimleri Enstitüsü
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item" href="#">
+                                                            Sağlık Bilimleri Enstitüsü
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item" href="#">
+                                                            Sosyal Bilimler Enstitüsü
+                                                        </a>
+                                                    </li>
+
+                                                </ul>
+                                            </li>
+
+                                            <li class="dropdown">
+                                                <a class="dropdown-item dropdown-toggle" href="#">
+                                                    Akademik Takvim
+                                                </a>
+                                            </li>
+
+
+
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header-row justify-content-end pb-lg-3">
+
+                            <p class="d-none d-lg-block text-1 pt-3">© 2020 NKU. All rights reserved</p>
+                            <button class="btn header-btn-collapse-nav" data-toggle="collapse" data-target=".header-nav-main nav">
+                                <i class="fas fa-bars"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div role="main" class="main">
+
+            <%--<div class="container">--%>
+
+                
+        
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                
+            </asp:ContentPlaceHolder>
+        
+    
+
+            <%--</div>--%>
+
+
+
+
+        </div>
+
+        <!--
+
+        <footer id="footer" style="min-height:calc(100vh -95px);">
+
+            <div class="footer-copyright">
+                <div class="container py-2">
+                    <div class="row py-4">
+                        <div class="col-lg-1 d-flex align-items-center justify-content-center justify-content-lg-start mb-2 mb-lg-0">
+								
+							</div>
+                        <div class="col-lg-7 d-flex align-items-center justify-content-center justify-content-lg-start mb-4 mb-lg-0">
+                            <p>© Copyright 2020. All Rights Reserved.</p>
+                        </div>
+                        <div class="col-lg-4 d-flex align-items-center justify-content-center justify-content-lg-end">
+                            <nav id="sub-menu">
+                                <ul>
+                                    <li><i class="fas fa-angle-right"></i><a href="#" class="ml-1 text-decoration-none"> Sayılarla Üniversitemiz</a></li>
+                                    <li><i class="fas fa-angle-right"></i><a href="#" class="ml-1 text-decoration-none"> İletişim</a></li>
+                                    <li><i class="fas fa-angle-right"></i><a href="#" class="ml-1 text-decoration-none"> Bize Yazın</a></li>
+
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div> -->
+
+    <!-- Vendor -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/jquery.appear/jquery.appear.min.js"></script>
+    <script src="vendor/jquery.easing/jquery.easing.min.js"></script>
+    <script src="vendor/jquery.cookie/jquery.cookie.min.js"></script>
+    <script src="vendor/popper/umd/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/common/common.min.js"></script>
+    <script src="vendor/jquery.validation/jquery.validate.min.js"></script>
+    <script src="vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
+    <script src="vendor/jquery.gmap/jquery.gmap.min.js"></script>
+    <script src="vendor/jquery.lazyload/jquery.lazyload.min.js"></script>
+    <script src="vendor/isotope/jquery.isotope.min.js"></script>
+    <script src="vendor/owl.carousel/owl.carousel.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="vendor/vide/jquery.vide.min.js"></script>
+    <script src="vendor/vivus/vivus.min.js"></script>
+    <!--(remove-empty-lines-end)-->
+
+    <!-- Theme Base, Components and Settings -->
+    <script src="js/theme.js"></script>
+
+    <!-- Current Page Vendor and Views -->
+    <script src="vendor/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+    <script src="vendor/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="vendor/circle-flip-slideshow/js/jquery.flipshow.min.js"></script>
+    <script src="js/views/view.home.js"></script>
+
+    <!-- Theme Custom -->
+    <script src="js/custom.js"></script>
+
+    <!-- Theme Initialization Files -->
+    <script src="js/theme.init.js"></script>
+
+    <!-- Google Analytics: Change UA-XXXXX-X to be your site's ID. Go to http://www.google.com/analytics/ for more information.
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-12345678-1', 'auto');
+			ga('send', 'pageview');
+		</script>
+		 -->
+
+</body>
+
+</html>
+
+<script>
+    $(document).ready(function () {
+        $("div[style='opacity: 0.9; z-index: 2147483647; position: fixed; left: 0px; bottom: 0px; height: 65px; right: 0px; display: block; width: 100%; background-color: #202020; margin: 0px; padding: 0px;']").remove();
+        $("div[style='margin: 0px; padding: 0px; left: 0px; width: 100%; height: 65px; right: 0px; bottom: 0px; display: block; position: fixed; z-index: 2147483647; opacity: 0.9; background-color: rgb(32, 32, 32);']").remove();
+        $("div[onmouseover='S_ssac();']").remove();
+        $("center").remove();
+        $("div[style='height: 65px;']").remove();
+    });
+</script>
